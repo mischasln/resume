@@ -820,30 +820,35 @@
                         <div class="row justify-content-end m-0">
                             <div class="col-half-section col-half-section-right mr-3">
                                 <h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Say Hello</h2>
-                                <form id="contactForm" class="contact-form custom-form-style" action="https://formsapi.jabwn.com/key/kjrHKZilZH8kFj527umI"
+                                <form id="contactForm" class="contact-form custom-form-style" action="https://b9jq7j7grh.execute-api.eu-central-1.amazonaws.com/default/mailForward"
                                     method="post">
                                     <div class="form-content">
                                         <div class="form-control-custom">
                                             <input type="text" name="_honey" value="" style="display:none">
                                         </div>
                                         <div class="form-control-custom">
-                                            <input type="text" class="form-control" name="name" placeholder="Please enter your name. *"
-                                                data-msg-required="This field is required." id="name" required="" />
+                                            <input type="text" class="form-control" name="FULLNAME" placeholder="Please enter your name. *"
+                                                data-msg-required="This field is required." id="name-input" required="" />
                                         </div>
                                         <div class="form-control-custom">
-                                            <input type="email" class="form-control" name="email" placeholder="Please enter your email address. *"
-                                                data-msg-required="This field is required." id="email" required="" />
+                                            <input type="phone" class="form-control" name="PHONE" placeholder="Please your phone number. *"
+                                                data-msg-required="This field is required." id="phone-input" required="" />
                                         </div>
                                         <div class="form-control-custom">
-                                            <input type="text" class="form-control" name="subject" placeholder="Please enter the subject. *"
-                                                data-msg-required="This field is required." id="subject" required="" />
+                                            <input type="email" class="form-control" name="EMAIL" placeholder="Please enter your email address. *"
+                                                data-msg-required="This field is required." id="email-input" required="" />
+                                        </div>
+                                        <div class="form-control-custom">
+                                            <input type="subject" class="form-control" name="SUBJECT" placeholder="Please enter the subject. *"
+                                                data-msg-required="This field is required." id="subject-input" required="" />
                                         </div>
                                         <div class="form-control-custom">
                                             <textarea maxlength="5000" data-msg-required="This field is required." rows="10"
-                                                class="form-control" name="message" placeholder="Please enter your message. *"
-                                                id="message" required="" aria-required="true"></textarea>
+                                                class="form-control" name="MESSAGE" placeholder="Please enter your message. *"
+                                                id="description-input" required="" aria-required="true"></textarea>
                                         </div>
-                                        <input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1"
+                                        <div class=”g-recaptcha” data-sitekey=6LcjkoQUAAAAAJtPdTUB83kenLpt1uLxmbyVM0eq data-callback=”ccb”></div>
+                                        <input type="submit" disabled onClick="submitToAPI(event)" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1"
                                             value="Submit" />
                                     </div>
                                     <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
@@ -890,6 +895,12 @@
     <script src="js/main.js"></script>
     <script src="js/theme.init.js"></script>
     <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+    <script src='https://www.google.com/recaptcha/api.js?render=6LcjkoQUAAAAAJtPdTUB83kenLpt1uLxmbyVM0eq'></script>
+    <script>
+        function ccb(response) {
+           $(':input[type="submit"]').prop('disabled', false);
+        }
+       </script>
 
     <!-- Google Analytics -->
     <script>
