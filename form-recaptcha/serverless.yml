@@ -1,0 +1,65 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: form-recaptcha # NOTE: update this with your service name
+app: resume
+tenant: mischasln
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  # The name of the profile to use for this service.
+  # It is configured in the ~/.aws/credentials file.
+
+# you can overwrite defaults here
+stage: dev
+region: eu-central-1
+
+# you can add statements to the Lambda function's IAM Role here
+iamRoleStatements:
+  - Effect: "Allow"
+    Action:
+      - "ses:SendEmail"
+    Resource: "*"
+
+# Describe your function here.
+functions:
+  form:
+    handler: handler.form
+    description: Contact form submission + Recaptcha (To prevent Abuse). Finally, emails the form data.
+    memorySize: 128
+    timeout: 5
+    # Configure the event that will trigger the function.
+    events:
+    - http:
+        path: form
+        method: post
+        # Setup CORS.
+        cors:
+          # Do not use '*' in production.
+          origin: '*'
+          headers:
+            - Content-Type
+            - X-Amz-Date
+            - Authorization
+            - X-Api-Key
+            - X-Amz-Security-Token
+            - X-Amz-User-Agent
+          methods:
+            - OPTIONS
+            - POST
+          # No cookies.
+          allowCredentials: false

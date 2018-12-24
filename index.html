@@ -820,7 +820,7 @@
                         <div class="row justify-content-end m-0">
                             <div class="col-half-section col-half-section-right mr-3">
                                 <h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Say Hello</h2>
-                                <form id="contactForm" class="contact-form custom-form-style" action="https://formsapi.jabwn.com/key/kjrHKZilZH8kFj527umI"
+                                <form id="recaptcha-contact" class="contact-form custom-form-style" action="https://m7kie39cp7.execute-api.us-east-1.amazonaws.com/dev/form"
                                     method="post">
                                     <div class="form-content">
                                         <div class="form-control-custom">
@@ -843,6 +843,7 @@
                                                 class="form-control" name="message" placeholder="Please enter your message. *"
                                                 id="message" required="" aria-required="true"></textarea>
                                         </div>
+                                        <div class="g-recaptcha" data-sitekey="6LcVH4IUAAAAAJbpZzxK1uufnQQGCfgZLb2eQ2Jo"></div>
                                         <input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1"
                                             value="Submit" />
                                     </div>
@@ -890,6 +891,10 @@
     <script src="js/main.js"></script>
     <script src="js/theme.init.js"></script>
     <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+
+    <!-- reCAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
 
     <!-- Google Analytics -->
     <script>
