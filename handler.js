@@ -77,15 +77,6 @@ module.exports.form = (event, context, callback) => {
             },
             "Subject": {
               "Data": formData['subject']
-            },
-            "Name": {
-              "Data": formData['name']
-            },
-            "Phone": {
-              "Data": formData['phone']
-            },
-            "Email": {
-              "Data": formData['email']
             }
           },
           "Source": config.sendMailsTo,
