@@ -823,11 +823,15 @@
                                 <form id="recaptcha-contact" action="https://flj8rakzsc.execute-api.eu-west-1.amazonaws.com/dev/form" method="POST">
                                     <div id="form-messages" class="error"></div>
                                     <label for="name" class="req">Name</label>
-                                    <input required type="text" id="name" name="name" class="full-width"><br>
+                                    <input required type="text" id="name" name="name" class="form-control" placeholder="Please enter your name. *"><br>
+                                    <label for="phone" class="req">Phone</label>
+                                    <input required type="text" id="phone" name="phone" class="form-control" placeholder="Please enter your phone number. *"><br>
                                     <label for="email" class="req">Email Address</label>
-                                    <input required type="email" id="email" name="_replyto" class="full-width"><br>
+                                    <input required type="email" id="email" name="_replyto" class="form-control" placeholder="Please enter your email address. *"><br>
+                                    <label for="subject" class="req">Subject</label>
+                                    <input required type="text" id="subject" name="subject" class="form-control" placeholder="Please enter the subject. *"><br>
                                     <label for="message" class="req">Message</label>
-                                    <textarea required name="message" id="message" cols="30" rows="10" class="full-width"></textarea><br>
+                                    <textarea required name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Please enter your message. *"></textarea><br>
                                     <div class="g-recaptcha" data-sitekey="6LcVH4IUAAAAAJbpZzxK1uufnQQGCfgZLb2eQ2Jo"></div>
                                     <input type="submit" value="Send" class="button">
                                   </form>

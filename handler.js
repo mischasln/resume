@@ -28,9 +28,17 @@ module.exports.form = (event, context, callback) => {
     console.error("Name not provided");
     return callback(null, prepareErrorResponse("Name cannot be empty"));
   }
+  if (!formData['phone']) {
+    console.error("Phone not provided");
+    return callback(null, prepareErrorResponse("Phone cannot be empty"));
+  }
   if (!formData['_replyto']) {
     console.error("Email address not provided");
     return callback(null, prepareErrorResponse("Email cannot be empty"));
+  }
+  if (!formData['subject']) {
+    console.error("Subject not provided");
+    return callback(null, prepareErrorResponse("Subject cannot be empty"));
   }
   if (!formData['message']) {
     console.error("Message not provided");
@@ -68,7 +76,7 @@ module.exports.form = (event, context, callback) => {
               }
             },
             "Subject": {
-              "Data": formData['name'] + " has left you a message"
+              "Data": formData['subject']
             }
           },
           "Source": config.sendMailsTo,
