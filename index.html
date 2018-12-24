@@ -820,40 +820,17 @@
                         <div class="row justify-content-end m-0">
                             <div class="col-half-section col-half-section-right mr-3">
                                 <h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Say Hello</h2>
-                                <form id="recaptcha-contact" class="contact-form custom-form-style" action="https://m7kie39cp7.execute-api.us-east-1.amazonaws.com/dev/form" method="POST">
-                                    <div class="form-content">
-                                        <div class="form-control-custom">
-                                            <input type="text" name="_honey" value="" style="display:none">
-                                        </div>
-                                        <div class="form-control-custom">
-                                            <input type="text" class="form-control" name="name" placeholder="Please enter your name. *"
-                                                data-msg-required="This field is required." id="name" required="" />
-                                        </div>
-                                        <div class="form-control-custom">
-                                            <input type="email" class="form-control" name="email" placeholder="Please enter your email address. *"
-                                                data-msg-required="This field is required." id="email" required="" />
-                                        </div>
-                                        <div class="form-control-custom">
-                                            <input type="text" class="form-control" name="subject" placeholder="Please enter the subject. *"
-                                                data-msg-required="This field is required." id="subject" required="" />
-                                        </div>
-                                        <div class="form-control-custom">
-                                            <textarea maxlength="5000" data-msg-required="This field is required." rows="10"
-                                                class="form-control" name="message" placeholder="Please enter your message. *"
-                                                id="message" required="" aria-required="true"></textarea>
-                                        </div>
-                                        <div class="g-recaptcha" data-sitekey="6LcVH4IUAAAAAJbpZzxK1uufnQQGCfgZLb2eQ2Jo"></div>
-                                        <input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1"
-                                            value="Submit" />
-                                    </div>
-                                    <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-                                        <strong>Success!</strong> Your message has been sent. :)
-                                    </div>
-                                    <div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-                                        <strong>Error!</strong> There was an error sending your message. :(
-                                        <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
-                                    </div>
-                                </form>
+                                <form id="recaptcha-contact" action="https://flj8rakzsc.execute-api.eu-west-1.amazonaws.com/dev/form" method="POST">
+                                    <div id="form-messages" class="error"></div>
+                                    <label for="name" class="req">Name</label>
+                                    <input required type="text" id="name" name="name" class="full-width"><br>
+                                    <label for="email" class="req">Email Address</label>
+                                    <input required type="email" id="email" name="_replyto" class="full-width"><br>
+                                    <label for="message" class="req">Message</label>
+                                    <textarea required name="message" id="message" cols="30" rows="10" class="full-width"></textarea><br>
+                                    <div class="g-recaptcha" data-sitekey="6LcVH4IUAAAAAJbpZzxK1uufnQQGCfgZLb2eQ2Jo"></div>
+                                    <input type="submit" value="Send" class="button">
+                                  </form>
                             </div>
                         </div>
                     </section>
@@ -892,6 +869,8 @@
     <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 
     <!-- reCAPTCHA -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{{ 'scripts.js' | prepend: site.baseurl }}"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
