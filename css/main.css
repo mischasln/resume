@@ -737,7 +737,11 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 }
 
 .html5-icon:hover{
-	transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.r-lang-icon:hover{
+  transform: scale(1.1);
 }
 
 .javascript-icon:hover{
@@ -905,6 +909,42 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 }
 
 .travis-ci-icon:hover{
+	transform: scale(1.1);
+}
+
+.jira-icon:hover{
+	transform: scale(1.1);
+}
+
+.aws-icon:hover{
+	transform: scale(1.1);
+}
+
+.invision-icon:hover{
+	transform: scale(1.1);
+}
+
+.lightroom-icon:hover{
+	transform: scale(1.1);
+}
+
+.photoshop-icon:hover{
+	transform: scale(1.1);
+}
+
+.aws-icon:hover{
+	transform: scale(1.1);
+}
+
+.sketch-icon:hover{
+	transform: scale(1.1);
+}
+
+.slack-icon:hover{
+	transform: scale(1.1);
+}
+
+.teams-icon:hover{
 	transform: scale(1.1);
 }
 
