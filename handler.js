@@ -59,7 +59,7 @@ module.exports.form = (event, context, callback) => {
         // Set email parameters
         var emailParams = {
           "Destination": {
-            "ToAddresses": formData['name']
+            "ToAddresses": [config.sendMailsTo]
           },
           "Message": {
             "Body": {
@@ -71,7 +71,7 @@ module.exports.form = (event, context, callback) => {
               "Data": formData['subject']
             }
           },
-          "Source": config.sendMailsTo,
+          "Source": formData['name'],
           "ReplyToAddresses": [formData['_replyto']]
         };
 
