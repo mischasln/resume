@@ -1,9 +1,9 @@
 'use strict';
 
-const config  = require('./config.json');
+const config = require('./config.json');
 const request = require('request');
-const qs      = require('querystring');
-const AWS     = require('aws-sdk');
+const qs = require('querystring');
+const AWS = require('aws-sdk');
 
 var sesClient = new AWS.SES();
 
@@ -38,17 +38,17 @@ module.exports.form = (event, context, callback) => {
   }
 
   // Post the acquired recaptcha response to Google to verify
-  request.post( 
+  request.post(
     {
-      "url"  : "https://www.google.com/recaptcha/api/siteverify",
-      "form" : 
-        {
-              "secret"   : config.captchaSiteSecret,
-              "response" : formData['g-recaptcha-response'],
-              "remoteip" : event.requestContext.identity.sourceIp
-        }
-    }, 
-    function(error, httpResponse, body) {
+      "url": "https://www.google.com/recaptcha/api/siteverify",
+      "form":
+      {
+        "secret": config.captchaSiteSecret,
+        "response": formData['g-recaptcha-response'],
+        "remoteip": event.requestContext.identity.sourceIp
+      }
+    },
+    function (error, httpResponse, body) {
       // Google has responded...
       var recaptchaResponse = JSON.parse(body);
       console.log("Recaptcha response: %j", recaptchaResponse);
@@ -59,7 +59,7 @@ module.exports.form = (event, context, callback) => {
         // Set email parameters
         var emailParams = {
           "Destination": {
-            "ToAddresses": [ config.sendMailsTo ]
+            "ToAddresses": [config.sendMailsTo]
           },
           "Message": {
             "Body": {
@@ -68,13 +68,13 @@ module.exports.form = (event, context, callback) => {
               }
             },
             "Subject": {
-              "Data": formData['subject']
+              "Data": formData['name'] + " has left you a message"
             }
           },
           "Source": config.sendMailsTo,
-          "ReplyToAddresses": [ formData['_replyto'] ]
+          "ReplyToAddresses": [formData['_replyto']]
         };
-        
+
         // Use the AWS SDK for SES and send the email
         sesClient.sendEmail(emailParams, function (err, data) {
           if (err) {
@@ -93,7 +93,7 @@ module.exports.form = (event, context, callback) => {
       }
     }
   );
-  
+
 };
 
 // Function to prepare a standard response structure
@@ -101,9 +101,9 @@ var prepareResponse = (message) => {
   return {
     "statusCode": 200,
     "headers": {
-        "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
-        "Access-Control-Allow-Credentials" : false // Required for cookies, authorization headers with HTTPS
-      },
+      "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+      "Access-Control-Allow-Credentials": false // Required for cookies, authorization headers with HTTPS
+    },
     "body": JSON.stringify({ "message": message })
   };
 };
@@ -112,9 +112,9 @@ var prepareErrorResponse = (message, error) => {
   return {
     "statusCode": 500,
     "headers": {
-        "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
-        "Access-Control-Allow-Credentials" : false // Required for cookies, authorization headers with HTTPS
-      },
+      "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+      "Access-Control-Allow-Credentials": false // Required for cookies, authorization headers with HTTPS
+    },
     "body": JSON.stringify({ "message": message, "error": error })
   };
 };
