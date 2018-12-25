@@ -23,6 +23,10 @@ $(document).ready(function () {
                 $(formMessages).text('Email cannot be empty');
                 return;
             }
+            if ($.trim($('#subject').val()) === '') {
+                $(formMessages).text('Subject cannot be empty');
+                return;
+            }
             if ($.trim($('#message').val()) === '') {
                 $(formMessages).text('Message cannot be empty');
                 return;
