@@ -19,16 +19,8 @@ $(function() {
             $(formMessages).text('Name cannot be empty');
             return;
         }
-        if ($.trim($('#phone').val()) === '') {
-            $(formMessages).text('Phone cannot be empty');
-            return;
-        }
         if ($.trim($('#email').val()) === '') {
             $(formMessages).text('Email cannot be empty');
-            return;
-        }
-        if ($.trim($('#subject').val()) === '') {
-            $(formMessages).text('Subject cannot be empty');
             return;
         }
         if ($.trim($('#message').val()) === '') {
