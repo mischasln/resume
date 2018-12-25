@@ -64,7 +64,9 @@ module.exports.form = (event, context, callback) => {
           "Message": {
             "Body": {
               "Text": {
-                "Data": formData['message']
+                "Data": "Name: " + formData['name'],
+                "Data": "Email: " + formData['_replyto'],
+                "Data": "Message: " + formData['message']
               }
             },
             "Subject": {
