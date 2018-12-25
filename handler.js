@@ -71,7 +71,7 @@ module.exports.form = (event, context, callback) => {
               "Data": formData['subject']
             }
           },
-          "Source": formData['name'],
+          "Source": config.url,
           "ReplyToAddresses": [ formData['_replyto'] ]
         };
         
