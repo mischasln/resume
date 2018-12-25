@@ -39,9 +39,7 @@
 	if( $('#timeline2').get(0) ) {
 		setTimeout(function(){
 			// Adjust Timeline Height On Resize
-			$(window).afterResize(function() {
-				timelineHeightAdjust.build();
-			});
+			timelineHeightAdjust.build();
 		}, 1000);
 
 		timelineHeightAdjust.build();
@@ -69,17 +67,6 @@
 				bottom: calcLastItemHeight
 			});
 		}
-	}
-
-	if( $('#timeline').get(0) ) {
-		setTimeout(function(){
-			// Adjust Timeline Height On Resize
-			$(window).afterResize(function() {
-				timelineHeightAdjust.build();
-			});
-		}, 1000);
-
-		timelineHeightAdjust.build();
 	}
 
 	/*
