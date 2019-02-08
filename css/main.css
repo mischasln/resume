@@ -523,7 +523,6 @@ section.section {
 .social-icons-footer li a { 
   height: 40px; 
   width: 40px;
-  opacity: .5;
 } 
 .social-icons-footer a:hover { 
   opacity: .7; 
