@@ -314,7 +314,6 @@ section.section {
     top: 50%; 
     left: -4px; 
     padding: 10px; 
-    background: #fff; 
     z-index: -1; 
     -webkit-transform: translate(0, -50%) rotate(45deg); 
     transform: translate(0, -50%) rotate(45deg); 
@@ -524,9 +523,10 @@ section.section {
 .social-icons-footer li a { 
   height: 40px; 
   width: 40px;
+  opacity: .5;
 } 
 .social-icons-footer a:hover { 
-  opacity: .5; 
+  opacity: .7; 
 }
 
 @media (max-width: 1281px) { 
