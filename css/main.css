@@ -869,6 +869,14 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 .postgresql-icon:hover{ 
 	transform: scale(1.1); 
 } 
+
+.php-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.jquery-icon:hover{ 
+	transform: scale(1.1); 
+} 
  
 .intellijidea-icon:hover{ 
 	transform: scale(1.1); 
