@@ -777,6 +777,10 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 .webpack-icon:hover{ 
 	transform: scale(1.1); 
 } 
+
+.azure-icon:hover{ 
+	transform: scale(1.1); 
+} 
  
 .npm-icon:hover{ 
 	transform: scale(1.1); 
@@ -874,14 +878,6 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 	transform: scale(1.1); 
 } 
 
-.azure-icon:hover{ 
-	transform: scale(1.1); 
-} 
-
-.grunt-icon:hover{ 
-	transform: scale(1.1); 
-} 
-
 .office-icon:hover{ 
 	transform: scale(1.1); 
 } 
@@ -920,11 +916,7 @@ section.custom-timeline .timeline-box .experience-info .company > span {
  
 .git-icon:hover{ 
 	transform: scale(1.1); 
-} 
-
-.grunt-icon:hover{ 
-	transform: scale(1.1); 
-} 
+}
  
 .gitkraken-icon:hover{ 
 	transform: scale(1.1); 
@@ -935,6 +927,10 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 } 
  
 .travis-ci-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.grunt-icon:hover{ 
 	transform: scale(1.1); 
 } 
  
