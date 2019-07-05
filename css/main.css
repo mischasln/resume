@@ -870,6 +870,26 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 	transform: scale(1.1); 
 } 
 
+.json-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.azure-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.grunt-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.office-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.raspberry-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
 .php-icon:hover{ 
 	transform: scale(1.1); 
 } 
