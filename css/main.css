@@ -49,6 +49,12 @@ section.section {
   font-size: 21px; 
   letter-spacing: -0.5px; 
   line-height: 1; 
+}
+
+.custom-font-size-3 { 
+  font-size: 11px; 
+  letter-spacing: -0.5px; 
+  line-height: 1; 
 } 
  
 .custom-text-color-1 { 
