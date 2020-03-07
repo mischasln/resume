@@ -1,9 +1,10 @@
 /* 
-* DEMO GENERAL STYLES 
-*/ 
+* GENERAL STYLES 
+*/
+
 body { 
   position: relative; 
-  overflow-x: hidden; 
+  overflow-x: hidden;
 } 
  
 .body { 
@@ -31,14 +32,15 @@ section.section {
   } 
 } 
 /* 
-* DEMO CUSTOM STYLES 
-*/ 
+* CUSTOM STYLES 
+*/
+
 .custom-position-1 { 
   position: relative; 
 } 
  
 .custom-font-size-1 { 
-  font-size: 60px; 
+  font-size: 74px; 
   font-weight: 600; 
   line-height: 1; 
   margin: -15px -5px 10px; 
@@ -46,13 +48,13 @@ section.section {
 } 
  
 .custom-font-size-2 { 
-  font-size: 21px; 
+  font-size: 24px; 
   letter-spacing: -0.5px; 
   line-height: 1; 
 }
 
 .custom-font-size-3 { 
-  font-size: 11px; 
+  font-size: 17px; 
   letter-spacing: -0.5px; 
   line-height: 1; 
 } 
@@ -390,6 +392,12 @@ section.section {
 /* 
 * About Me 
 */ 
+.about-me { 
+  width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .about-me-more { 
   display: none; 
   background: #393834; 
@@ -618,17 +626,17 @@ section.custom-timeline .timeline-box .experience-info .to {
   display: inline-block; 
   width: 49%; 
   text-transform: uppercase; 
-  font-size: 12px; 
+  font-size: 18px; 
   line-height: 1.3; 
 } 
 section.custom-timeline .timeline-box .experience-info .from > span, 
 section.custom-timeline .timeline-box .experience-info .to > span { 
   display: block; 
   text-transform: none; 
-  font-size: 16px; 
+  font-size: 18px; 
 } 
 section.custom-timeline .timeline-box .experience-info .company { 
-  font-size: 18px; 
+  font-size: 19px; 
 } 
 section.custom-timeline .timeline-box .experience-info .company > span { 
   display: block; 
@@ -743,12 +751,20 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 .r-lang-icon:hover{ 
   transform: scale(1.1); 
 } 
+
+.java-icon:hover{ 
+	transform: scale(1.1); 
+} 
  
 .javascript-icon:hover{ 
 	transform: scale(1.1); 
 } 
  
 .matlab-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.netbeans-icon:hover{ 
 	transform: scale(1.1); 
 } 
  
@@ -1354,7 +1370,7 @@ ul.hb-list li h6 {
 * Say Hello 
 */ 
 .col-half-section.col-half-section-left { 
-  float: left; 
+  float: left;
 } 
  
 .custom-form-style .form-control-custom .form-control { 
