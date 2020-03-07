@@ -803,6 +803,14 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 .azure-icon:hover{ 
 	transform: scale(1.1); 
 } 
+
+.relativity-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.nuix-icon:hover{ 
+	transform: scale(1.1); 
+} 
  
 .npm-icon:hover{ 
 	transform: scale(1.1); 
