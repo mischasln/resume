@@ -442,7 +442,7 @@ section.section {
 .custom-nav-button { 
   display: inline-block; 
   padding: 30px 10px; 
-  font-size: 1.5em; 
+  font-size: 1.2em; 
   letter-spacing: -0.5px; 
   line-height: 1.3; 
   text-align: center; 
@@ -463,7 +463,7 @@ section.section {
 } 
 .custom-nav-button i { 
   float: left; 
-  font-size: 1.5em; 
+  font-size: 1.2em; 
   margin-right: 5px; 
   vertical-align: middle; 
 } 
