@@ -804,6 +804,18 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 	transform: scale(1.1); 
 } 
 
+.azuredevops-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.azuredatafactory-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.azuredatalakestore-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
 .relativity-icon:hover{ 
 	transform: scale(1.1); 
 } 
@@ -837,6 +849,10 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 } 
  
 .docker-icon:hover{ 
+	transform: scale(1.1); 
+} 
+
+.servicenow-icon:hover{ 
 	transform: scale(1.1); 
 } 
  
