@@ -894,6 +894,14 @@ section.custom-timeline .timeline-box .experience-info .company > span {
  
 .scipy-icon:hover{ 
 	transform: scale(1.1); 
+}  
+
+.pandas-icon:hover{ 
+	transform: scale(1.1); 
+}  
+
+.seaborn-icon:hover{ 
+	transform: scale(1.1); 
 } 
  
 .angularjs-icon:hover{ 
